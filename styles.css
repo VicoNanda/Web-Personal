@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Chewy', cursive; /* Menggunakan font Chewy */
+    background-color: #f7f7f7; /* Warna latar belakang */
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.title {
+    color: #ff69b4;
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out; /* Animasi fadeInUp */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    color: #555;
+    font-size: 1.2em;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-out; /* Animasi fadeInUp */
+}
+
+.gifs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.gifs img {
+    width: 150px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.gifs img:hover {
+    transform: scale(1.1);
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out; /* Animasi fadeIn */
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+.hidden {
+    display: none;
+}
+
+#specialMessage {
+    margin-top: 30px;
+    animation: slideInDown 1s ease-out; /* Animasi slideInDown */
+}
+
+#specialMessage img {
+    width: 200px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
