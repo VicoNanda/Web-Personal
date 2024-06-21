@@ -1,47 +1,29 @@
+/* CSS untuk desain responsif */
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     font-family: 'Chewy', cursive; /* Menggunakan font Chewy */
     background-color: #f7f7f7; /* Warna latar belakang */
 }
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-    width: 90%; /* Menggunakan persen untuk lebar kontainer */
+    width: 90%; /* Lebar kontainer responsif */
     margin: 0 auto; /* Pusatkan kontainer di tengah */
+    padding: 20px; /* Tambahkan padding untuk memisahkan konten dari tepi layar */
 }
 
 .title {
     color: #ff69b4;
     font-size: 3em;
     margin-bottom: 20px;
-    animation: fadeInUp 1s ease-out; /* Animasi fadeInUp */
-    font-size: 2vw; /* Menggunakan viewport width untuk ukuran font */
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    font-size: 2.5vw; /* Ukuran font responsif */
 }
 
 .message {
     color: #555;
     font-size: 1.2em;
     margin: 20px 0;
-    animation: fadeInUp 1s ease-out; /* Animasi fadeInUp */
-    font-size: 1.5vw; /* Ukuran font responsif */
+    font-size: 1.2vw; /* Ukuran font responsif */
 }
 
 .gifs {
@@ -73,8 +55,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
-    animation: fadeIn 1s ease-out; /* Animasi fadeIn */
-    font-size: 1.5vw; /* Ukuran font responsif */
+    font-size: 1.2vw; /* Ukuran font responsif */
     padding: 1vw 2vw; /* Padding responsif */
 }
 
@@ -88,30 +69,11 @@ button:hover {
 
 #specialMessage {
     margin-top: 30px;
-    animation: slideInDown 1s ease-out; /* Animasi slideInDown */
 }
 
 #specialMessage img {
-    width: 200px;
+    width: 100%; /* Gambar responsif */
+    max-width: 300px; /* Batasi lebar gambar */
     border-radius: 15px;
     margin-top: 20px;
-}
-
-/* Animasi CSS tambahan */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideInDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
 }
