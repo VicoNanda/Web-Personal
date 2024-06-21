@@ -13,6 +13,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
+    width: 90%; /* Menggunakan persen untuk lebar kontainer */
+    margin: 0 auto; /* Pusatkan kontainer di tengah */
 }
 
 .title {
@@ -20,6 +22,7 @@ body {
     font-size: 3em;
     margin-bottom: 20px;
     animation: fadeInUp 1s ease-out; /* Animasi fadeInUp */
+    font-size: 2vw; /* Menggunakan viewport width untuk ukuran font */
 }
 
 @keyframes fadeInUp {
@@ -38,6 +41,7 @@ body {
     font-size: 1.2em;
     margin: 20px 0;
     animation: fadeInUp 1s ease-out; /* Animasi fadeInUp */
+    font-size: 1.5vw; /* Ukuran font responsif */
 }
 
 .gifs {
@@ -49,7 +53,8 @@ body {
 }
 
 .gifs img {
-    width: 150px;
+    width: 30%; /* Ukuran gambar responsif */
+    max-width: 150px; /* Batasi lebar gambar */
     border-radius: 15px;
     transition: transform 0.3s;
 }
@@ -69,6 +74,8 @@ button {
     transition: background-color 0.3s;
     margin-top: 20px;
     animation: fadeIn 1s ease-out; /* Animasi fadeIn */
+    font-size: 1.5vw; /* Ukuran font responsif */
+    padding: 1vw 2vw; /* Padding responsif */
 }
 
 button:hover {
@@ -88,4 +95,23 @@ button:hover {
     width: 200px;
     border-radius: 15px;
     margin-top: 20px;
+}
+
+/* Animasi CSS tambahan */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
